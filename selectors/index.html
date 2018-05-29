@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JQuery | Selectors</title>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./css/master.css">
+  </script>
+</head>
+<body>
+  <header>
+    <h1>JQuery Selectors</h1>
+  </header>
+
+  <div id="container">
+    <h1 id="heading1">Heading One</h1>
+    <p id="para1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo autem animi amet laudantium error neque itaque, voluptate ullam nostrum iure cum, hic nihil iusto consequuntur nobis perspiciatis beatae <span>reiciendis corporis doloremque esse explicabo. Eius facere ipsam ipsa quo, </span>natus distinctio veritatis. Ut vitae eos deserunt architecto sapiente, dignissimos voluptatibus ad.</p>
+
+    <h1 class="heading2">Heading Two</h1>
+    <p class="para2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo autem animi amet laudantium error neque itaque, voluptate ullam nostrum iure cum, hic nihil iusto consequuntur nobis perspiciatis beatae <span>reiciendis corporis doloremque esse explicabo. Eius facere ipsam ipsa quo, </span>natus distinctio veritatis. Ut vitae eos deserunt architecto sapiente, dignissimos voluptatibus ad.</p>
+
+    <span>reiciendis corporis doloremque esse explicabo. Eius facere ipsam ipsa quo, </span>
+
+    <ul id="list">
+      <li>List Item</li>
+      <li>List Item</li>
+      <li>List Item</li>
+      <li>List Item</li>
+      <li>List Item</li>
+      <li>List Item</li>
+    </ul>
+
+    <input type="button" value="Button 1">
+    <input type="submit" value="Submit">
+    <input type="text">
+
+    <a href="http://google.com">Google</a>
+    <a href="http://yahoo.com">Yahoo</a>
+  </div>
+
+  <script>
+//JQuery selecor examples
+
+// $('*').hide(); // hide everything
+
+// Selection via element, class and id
+// $('h1').hude();
+// $('h1#heading1').hude();
+// $("h1.heading2").hide();
+// $("span").css("color", "red");
+ $("p span").css("color", "red");
+
+// CSS 3 pseudo selectors
+$("ul#list li:first").css("color", "red");
+$("ul#list li:last").css("color", "green");
+$("ul#list li:even").css("background-color", "yellow");
+$("ul#list li:odd").css("background-color", "#cccccc");
+$("ul#list li:nth-child(3n)").css("list-style", "none");
+
+// Input type selector
+//$(":button").hide();
+//$(":submit").hide();
+//$(":text").hide();
+
+// Attribute selectors
+$('[href]').css('color','red'); // Anything with a href attribute
+$('a[href="http://yahoo.com"]').css('color','green');
+
+</script>
+
+</body>
+</html>
