@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JQuery | Selectors</title>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./css/master.css">
+  <script>
+  // JQuery examples
+// Make sure html document has loaded before attempting to run JQuery code
+$(document).ready(function() {
+  $("h1").css("color", "red");
+  // Mouse Events
+  /*
+  // This runs the onclick method
+  $("#btn1").click(function() {
+    alert("Button 1 Clicked!");
+  });
+  $("#btn1").on("click", function() {
+    alert("Button 1 Clicked!");
+  });
+
+  $("#btn1").on("click", function() {
+    $("p#para1").hide();
+  });
+  $("#btn2").on("click", function() {
+    $("p#para1").show();
+  });
+  $("#btn1").on("click", function() {
+    $("p#para1").toggle();
+  });
+
+  $("#btn1").on("dblclick", function() {
+    $("p#para1").toggle();
+  });
+  // Hoever does mouseenter and mouseleave
+  $("#btn1").hover(function() {
+    $("p#para1").toggle();
+  });
+
+  $("#btn1").on("mouseenter", function() {
+    $("p#para1").toggle();
+  });
+  $("#btn1").on("mouseleave", function() {
+    $("p#para1").toggle();
+  });
+  $("#btn1").on("mousemove", function() {
+    $("p#para1").toggle();
+  });
+
+  $("#btn1").on("mousedown", function() {
+    $("p#para1").toggle();
+  });
+  $("#btn1").on("mouseup", function() {
+    $("p#para1").toggle();
+  });
+
+
+  //Passing an optional parameter
+  $("#btn1").on("click", function(e) {
+    //console.log(e);
+    //alert(e.currentTarget.id);
+    //alert(e.currentTarget.innerHTML);
+    //alert(e.currentTarget.outerHTML);
+    alert(e.currentTarget.className);
+  });
+
+  // Get the coordiates of the mouse
+  $("#btn1").on("mousemove", function(e) {
+    // Get the coords of the mouse moving
+    console.log("Coords: Y: " + e.clientY + " X: " + e.clientX);
+  });
+  $(document).on("mousemove", function(e) {
+    // Get the coords of the mouse moving
+    $("#coords").html("Coords: Y: " + e.clientY + " X: " + e.clientX);
+  });
+
+
+  // Form Events
+  // Highlight the focused input element
+  $("input").focus(function() {
+    //alert("Focus");
+    //$("input#name").css("background", "pink");
+    $(this).css("background", "pink");
+  });
+
+  $("input").blur(function() {
+    $(this).css("background", "white");
+  });
+
+  // Track the values typed in
+  $("input").keyup(function(e) {
+    console.log(e.target.value);
+  });
+    */
+  // Selector input changed
+  $("select#gender").change(function(e) {
+    alert(e.target.value);
+  });
+
+  // Submit Events
+  $("#form").submit(function(e) {
+    e.preventDefault(); // Prevent the Form from actually submitting
+    var name = $("input#name").val();
+    console.log(name);
+  });
+});
+</script>
+</head>
+<body>
+  <header>
+    <h1>JQuery Events</h1>
+  </header>
+
+  <div id="container">
+    <h3>Mouse Events</h3>
+    <button id="btn1" class="btnClass">Button 1</button>
+    <button id="btn2">Button 2</button>
+    <p id="para1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni numquam praesentium vel possimus deleniti laborum quia eos, odit rem voluptas minima molestiae expedita, earum et! Voluptate reiciendis nulla, libero esse, expedita incidunt magni, quis, quas sed minus cumque culpa aut?</p>
+    <h1 id="coords"></h1>
+    <hr>
+    <form id="form" class="" action="index.html" method="post">
+      <label for="">Name</label><br>
+      <input type="text" name="name" id="name">
+      <br>
+      <label for="">Email</label><br>
+      <input type="email" name="email" id="email">
+      <br>
+      <label for="">Gender</label><br>
+      <select name="gender" id="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+      <br>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+
+</body>
+</html>
